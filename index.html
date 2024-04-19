@@ -292,7 +292,7 @@
       </main>
 
       <footer class="my-5 pt-5 text-body-secondary text-center text-small">
-        <p class="mb-1">&copy; 2024 Paulo Vitor Carvalho - Dev</p>
+        <p class="mb-1" id="ano"></p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="https://www.linkedin.com/in/paulovcsiqueira/">Linkedin</a></li>
           <li class="list-inline-item"><a href="https://github.com/paulovc26">GitHub</a></li>
@@ -301,7 +301,13 @@
     </div>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="checkout.js"></script>
+    <script>
+        const pegaData = new Date();
+        let ano = pegaData.getFullYear();
+        
+        let paragrafo = document.getElementById('ano');
+        paragrafo.innerHTML = '&copy; '+ ano + ' Paulo Vitor Carvalho - Dev ';
+    </script>
     <script>
         $(document).ready(function () {
           $("#cep").on("blur", function () {
